@@ -45,3 +45,13 @@ extension Int64 {
     }
 }
 
+extension String {
+    func additive(_ value: Int) -> String {
+        if let intValue = Int(self) {
+            return String(intValue + value)
+        }
+        return self
+    }
+}
+
+

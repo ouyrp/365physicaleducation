@@ -27,7 +27,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
                 strongSelf.loadData()
             }
         })
-        tableView.mj_footer = MJRefreshBackNormalFooter(refreshingBlock:{
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingBlock:{
             [weak self] in
             if let strongSelf = self {
                 strongSelf.loadData()
@@ -54,12 +54,15 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrdata.count
+        return newslist.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: LPDBDistributorTableViewCellID, for: indexPath) as! OUYangTableViewCell
-        cell.setData(newData: arrdata[indexPath.row])
+        if newslist.count > 0 {
+            let model = newslist[indexPath.row]
+            cell.setData(newData: model as! TestEntity)
+        }
         return cell
     }
 }
@@ -68,15 +71,14 @@ class ViewController: UIViewController {
     let tableView = UITableView()
     var bag = DisposeBag()
     var arrdata:[TestEntity] = []
-     var newslist:NSMutableArray?
-    var pageid:NSString?
+    var newslist:NSMutableArray = NSMutableArray.init()
+    var pageid:NSString = "0"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "365体育资讯"
         self.loadData();
-        newslist = NSMutableArray.init()
         setupTableView()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -88,27 +90,26 @@ class ViewController: UIViewController {
     
     fileprivate func loadData(){
         var request = TestApi()
-        request.page = pageid ?? "0"
+        request.page = pageid
         HTTP.request(request)
             .asObservable()
             .mapArray(TestEntity.self, path: "showapi_res_body.newslist")
             .subscribe(onNext: {
                 self.arrdata = $0
-                if self.pageid?.intValue == 0{
-                    self.newslist?.removeAllObjects()
+                if self.pageid.intValue == 0{
+                    self.newslist.removeAllObjects()
                 }
-                self.newslist?.add($0)
+                self.newslist.addObjects(from: $0)
                 
-                if self.newslist?.count == 15 {
-                    self.pageid = String(Formatter:"%ld", ((self.pageid?.intValue)! + 1))
+                if self.newslist.count % 15 == 0 {
+                    self.pageid = String(self.pageid.intValue + 1) as NSString
                 } else {
                     self.tableView.mj_footer.isHidden = true
                     self.tableView.mj_footer.endRefreshingWithNoMoreData()
                 }
                 self.tableView.reloadData()
                 self.tableView.mj_header.endRefreshing()
-                self.tableView.mj_footer.endRefreshingWithNoMoreData()
-                print($0.first)
+                self.tableView.mj_footer.endRefreshing()
             }, onError: {
                 print($0)
             }).disposed(by: bag)
