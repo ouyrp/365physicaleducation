@@ -12,15 +12,34 @@ import RxSwift
 final class JokeViewModel {
     
     var bag = DisposeBag()
+    var jokeList: [JokeEntity] = []
+    var output: PublishSubject<Bool> = PublishSubject()
     
+    private var currantPage: Int = 0
     func load(_ more: Bool = false) {
         
-        HTTP.request(JokeAPI())
+        if more {
+            currantPage += 1
+        } else {
+            currantPage = 1
+        }
+        
+        HTTP.request(JokeAPI(with: currantPage))
             .asObservable()
-            .mapJSON()
-            .subscribe(onNext: { _  in
+            .mapArray(JokeEntity.self, path: "showapi_res_body.contentlist")
+            .subscribe(onNext: { [weak self] in
                 
-            }, onError: { _ in
+                if more {
+                    self?.jokeList.append(contentsOf: $0)
+                } else {
+                    self?.jokeList = $0
+                }
+                self?.output.onNext(true)
+                
+            }, onError: { [weak self] in
+                
+                print($0)
+                self?.output.onNext(false)
                 
             }).disposed(by: bag)
         
@@ -29,3 +48,5 @@ final class JokeViewModel {
     
     
 }
+
+

@@ -17,6 +17,7 @@ target '365physicaleducation' do
    pod 'Moya'
    pod 'MJRefresh'
    pod 'Masonry'
+   pod 'Reusable'
 
   end
 

@@ -23,7 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }, onError: {
                 print($0)
             }).disposed(by: DisposeBag())
+
         
+        let tabbar = UITabBarController()
+        
+        tabbar.viewControllers = [
+            UINavigationController(rootViewController: ViewController()),
+            UINavigationController(rootViewController: JokeViewController())
+        ]
+        
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabbar
+        window?.makeKeyAndVisible()
+
         return true
     }
 

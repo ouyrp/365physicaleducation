@@ -74,6 +74,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>Reusable.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
