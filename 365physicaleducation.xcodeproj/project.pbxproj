@@ -30,7 +30,13 @@
 		330594201FEA3BF900441AE9 /* Optional+Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305941F1FEA3BF900441AE9 /* Optional+Snippet.swift */; };
 		3354F9931FEA431800797808 /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9921FEA431800797808 /* JokeAPI.swift */; };
 		3354F9971FEA438200797808 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9961FEA438200797808 /* JokeViewModel.swift */; };
-		3354F9991FEA43B300797808 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9981FEA43B300797808 /* JokeViewController.swift */; };
+		3354F99C1FEA4ADD00797808 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F99A1FEA4ADD00797808 /* JokeViewController.swift */; };
+		3354F99D1FEA4ADD00797808 /* JokeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3354F99B1FEA4ADD00797808 /* JokeViewController.xib */; };
+		3354F9A01FEA4E4400797808 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F99E1FEA4E4400797808 /* JokeTableViewCell.swift */; };
+		3354F9A11FEA4E4400797808 /* JokeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3354F99F1FEA4E4400797808 /* JokeTableViewCell.xib */; };
+		3354F9A41FEA4EDB00797808 /* ChainableView+Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9A21FEA4EDB00797808 /* ChainableView+Snippet.swift */; };
+		3354F9A51FEA4EDB00797808 /* Namespace+Snipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9A31FEA4EDB00797808 /* Namespace+Snipper.swift */; };
+		3354F9A71FEA4FCD00797808 /* UIColor+Snipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9A61FEA4FCD00797808 /* UIColor+Snipper.swift */; };
 		9ADD357844069DE67DEBA475 /* Pods_365physicaleducationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9B70752B5BD7B447BBE3D0 /* Pods_365physicaleducationUITests.framework */; };
 		AE23C0B67EA404FF8FBEC3FA /* Pods_365physicaleducationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA2C8784DD2609515360437 /* Pods_365physicaleducationTests.framework */; };
 		B3962E239EFE3B1D324EB89F /* Pods_365physicaleducation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */; };
@@ -84,7 +90,13 @@
 		3305941F1FEA3BF900441AE9 /* Optional+Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Snippet.swift"; sourceTree = "<group>"; };
 		3354F9921FEA431800797808 /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
 		3354F9961FEA438200797808 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
-		3354F9981FEA43B300797808 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
+		3354F99A1FEA4ADD00797808 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
+		3354F99B1FEA4ADD00797808 /* JokeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeViewController.xib; sourceTree = "<group>"; };
+		3354F99E1FEA4E4400797808 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
+		3354F99F1FEA4E4400797808 /* JokeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JokeTableViewCell.xib; sourceTree = "<group>"; };
+		3354F9A21FEA4EDB00797808 /* ChainableView+Snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ChainableView+Snippet.swift"; sourceTree = "<group>"; };
+		3354F9A31FEA4EDB00797808 /* Namespace+Snipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Namespace+Snipper.swift"; sourceTree = "<group>"; };
+		3354F9A61FEA4FCD00797808 /* UIColor+Snipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Snipper.swift"; sourceTree = "<group>"; };
 		3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_365physicaleducation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4548CEB3F761F4CA8AB36217 /* Pods-365physicaleducationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducationTests/Pods-365physicaleducationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71AE3F8A6E4A26DB8C2CE1F1 /* Pods-365physicaleducation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducation.release.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +231,9 @@
 		3305941E1FEA3BEF00441AE9 /* Snippet */ = {
 			isa = PBXGroup;
 			children = (
+				3354F9A61FEA4FCD00797808 /* UIColor+Snipper.swift */,
+				3354F9A21FEA4EDB00797808 /* ChainableView+Snippet.swift */,
+				3354F9A31FEA4EDB00797808 /* Namespace+Snipper.swift */,
 				3305941F1FEA3BF900441AE9 /* Optional+Snippet.swift */,
 			);
 			path = Snippet;
@@ -236,7 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				3354F9961FEA438200797808 /* JokeViewModel.swift */,
-				3354F9981FEA43B300797808 /* JokeViewController.swift */,
+				3354F99A1FEA4ADD00797808 /* JokeViewController.swift */,
+				3354F99B1FEA4ADD00797808 /* JokeViewController.xib */,
+				3354F99E1FEA4E4400797808 /* JokeTableViewCell.swift */,
+				3354F99F1FEA4E4400797808 /* JokeTableViewCell.xib */,
 			);
 			path = Joke;
 			sourceTree = "<group>";
@@ -382,7 +400,9 @@
 			files = (
 				30EBD2F91FE247F700CCF7FE /* LaunchScreen.storyboard in Resources */,
 				30EBD2F61FE247F700CCF7FE /* Assets.xcassets in Resources */,
+				3354F9A11FEA4E4400797808 /* JokeTableViewCell.xib in Resources */,
 				30EBD2F41FE247F700CCF7FE /* Main.storyboard in Resources */,
+				3354F99D1FEA4ADD00797808 /* JokeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +500,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -496,6 +517,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -587,11 +609,14 @@
 				30EBD3311FE3C5B800CCF7FE /* APIList.swift in Sources */,
 				30EBD2F11FE247F700CCF7FE /* ViewController.swift in Sources */,
 				3065D11B1FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift in Sources */,
-				3354F9991FEA43B300797808 /* JokeViewController.swift in Sources */,
+				3354F9A01FEA4E4400797808 /* JokeTableViewCell.swift in Sources */,
+				3354F9A51FEA4EDB00797808 /* Namespace+Snipper.swift in Sources */,
+				3354F99C1FEA4ADD00797808 /* JokeViewController.swift in Sources */,
 				330594201FEA3BF900441AE9 /* Optional+Snippet.swift in Sources */,
 				3354F9931FEA431800797808 /* JokeAPI.swift in Sources */,
 				3065D1221FE8D9AF00AF8DC1 /* OUYWebViewController.swift in Sources */,
 				30EBD3341FE3C5B800CCF7FE /* PDAPIConvertible.swift in Sources */,
+				3354F9A71FEA4FCD00797808 /* UIColor+Snipper.swift in Sources */,
 				30EBD32F1FE3C5B800CCF7FE /* ResponseConvertible.swift in Sources */,
 				3065D11D1FE8AD0000AF8DC1 /* Int+LPDBExtension.swift in Sources */,
 				3065D1181FE8AD0000AF8DC1 /* UIColor+LPDBExtension.swift in Sources */,
@@ -599,6 +624,7 @@
 				3065D1201FE8B60300AF8DC1 /* OUYangTableViewCell.swift in Sources */,
 				3065D11A1FE8AD0000AF8DC1 /* Operator+LPDBExtension.swift in Sources */,
 				3065D1161FE8AD0000AF8DC1 /* Date+LPDBExtension.swift in Sources */,
+				3354F9A41FEA4EDB00797808 /* ChainableView+Snippet.swift in Sources */,
 				30EBD2EF1FE247F700CCF7FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
