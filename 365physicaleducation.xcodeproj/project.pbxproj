@@ -140,14 +140,11 @@
 		3065D10C1FE8AC1500AF8DC1 /* http */ = {
 			isa = PBXGroup;
 			children = (
+				33FC60981FEA5B2400BA98EC /* API */,
 				30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */,
-				30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */,
-				30EBD32B1FE3C5B600CCF7FE /* APIList.swift */,
 				30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */,
 				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
 				30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */,
-				3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */,
-				3354F9921FEA431800797808 /* JokeAPI.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -260,6 +257,17 @@
 				3354F99F1FEA4E4400797808 /* JokeTableViewCell.xib */,
 			);
 			path = Joke;
+			sourceTree = "<group>";
+		};
+		33FC60981FEA5B2400BA98EC /* API */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */,
+				30EBD32B1FE3C5B600CCF7FE /* APIList.swift */,
+				3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */,
+				3354F9921FEA431800797808 /* JokeAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		7485993EB5674B570B5F91F4 /* Pods */ = {
