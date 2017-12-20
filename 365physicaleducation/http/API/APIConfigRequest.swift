@@ -18,7 +18,7 @@ struct ConfigApi: PDAPIConvertible {
     }
     
     func baseURL() -> String {
-         return " https://api.bmob.cn/1/"
+         return "https://api.bmob.cn/1/"
     }
 }
 

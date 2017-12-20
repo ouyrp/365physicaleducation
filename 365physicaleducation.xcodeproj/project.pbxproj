@@ -70,6 +70,8 @@
 		3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUYangTableViewCell.swift; sourceTree = "<group>"; };
 		3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUYWebViewController.swift; sourceTree = "<group>"; };
 		3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigRequest.swift; sourceTree = "<group>"; };
+		3065D1251FEA673D00AF8DC1 /* 365physicaleducation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 365physicaleducation.entitlements; sourceTree = "<group>"; };
+		3065D1261FEA6DDF00AF8DC1 /* JPushDemo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JPushDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		30EBD2EB1FE247F700CCF7FE /* 365physicaleducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 365physicaleducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30EBD2F01FE247F700CCF7FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,12 +195,14 @@
 		30EBD2ED1FE247F700CCF7FE /* 365physicaleducation */ = {
 			isa = PBXGroup;
 			children = (
+				3065D1251FEA673D00AF8DC1 /* 365physicaleducation.entitlements */,
 				3354F9941FEA435D00797808 /* Section */,
 				3305941E1FEA3BEF00441AE9 /* Snippet */,
 				3065D11E1FE8B5C000AF8DC1 /* Controller */,
 				3065D10D1FE8ACED00AF8DC1 /* extension */,
 				3065D10C1FE8AC1500AF8DC1 /* http */,
 				30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */,
+				3065D1261FEA6DDF00AF8DC1 /* JPushDemo-Bridging-Header.h */,
 				30EBD2F21FE247F700CCF7FE /* Main.storyboard */,
 				30EBD2F51FE247F700CCF7FE /* Assets.xcassets */,
 				30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */,
@@ -379,6 +383,14 @@
 					30EBD2EA1FE247F700CCF7FE = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					30EBD2FE1FE247F700CCF7FE = {
 						CreatedOnToolsVersion = 9.1;
@@ -812,13 +824,15 @@
 			baseConfigurationReference = 8729F8004A9EE690DC095DFC /* Pods-365physicaleducation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 365physicaleducation/365physicaleducation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZD69NW5699;
+				DEVELOPMENT_TEAM = 7249H5FM4V;
 				INFOPLIST_FILE = 365physicaleducation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducation";
+				PRODUCT_BUNDLE_IDENTIFIER = ouyang.365physicaleducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/365physicaleducation/JPushDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -829,13 +843,15 @@
 			baseConfigurationReference = 71AE3F8A6E4A26DB8C2CE1F1 /* Pods-365physicaleducation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 365physicaleducation/365physicaleducation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZD69NW5699;
+				DEVELOPMENT_TEAM = 7249H5FM4V;
 				INFOPLIST_FILE = 365physicaleducation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducation";
+				PRODUCT_BUNDLE_IDENTIFIER = ouyang.365physicaleducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/365physicaleducation/JPushDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

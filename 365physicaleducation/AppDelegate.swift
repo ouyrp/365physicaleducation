@@ -36,8 +36,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabbar
         window?.makeKeyAndVisible()
-
+        
+        let type: UInt = UIUserNotificationType.alert.rawValue | UIUserNotificationType.sound.rawValue | UIUserNotificationType.badge.rawValue
+        JPUSHService.register(forRemoteNotificationTypes: type, categories: nil)
+        
+        // MAEK: 生产状态下修改 apsForProduction 配置参数
+        JPUSHService.setup(withOption: launchOptions, appKey: "77eb4635421dd411e5b24208", channel: nil, apsForProduction: false)
         return true
+    }
+    
+    private func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        /// Required - 注册 DeviceToken
+        JPUSHService.registerDeviceToken(deviceToken as Data!)
+    }
+    
+    private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        JPUSHService.handleRemoteNotification(userInfo)
+    }
+    
+    private func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        print("did Fail To Register For Remote Notifications With Error = \(error)")
+    }
+    
+    private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        print("userInfo = \(userInfo)")
+        
+        JPUSHService.handleRemoteNotification(userInfo)
+        completionHandler(UIBackgroundFetchResult.newData);
+    }
+    
+    // 清除badge 和 通知栏的信息
+    func applicationWillEnterForeground(application: UIApplication) {
+        application.applicationIconBadgeNumber = 0
+        application.cancelAllLocalNotifications()
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

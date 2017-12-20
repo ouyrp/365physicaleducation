@@ -18,6 +18,7 @@ target '365physicaleducation' do
    pod 'MJRefresh'
    pod 'Masonry'
    pod 'Reusable'
+   pod 'JPush'
 
   end
 
