@@ -69,7 +69,6 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
 
 class ViewController: UIViewController {
     let tableView = UITableView()
-    var bag = DisposeBag()
     var arrdata:[TestEntity] = []
     var newslist:NSMutableArray = NSMutableArray.init()
     var pageid: Int = 0
@@ -112,7 +111,7 @@ class ViewController: UIViewController {
                 self.tableView.mj_footer.endRefreshing()
             }, onError: {
                 print($0)
-            }).disposed(by: bag)
+            }).disposed(by: DisposeBag())
     }
     
     

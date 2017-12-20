@@ -14,6 +14,7 @@
 		3065D11D1FE8AD0000AF8DC1 /* Int+LPDBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1151FE8AD0000AF8DC1 /* Int+LPDBExtension.swift */; };
 		3065D1201FE8B60300AF8DC1 /* OUYangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */; };
 		3065D1221FE8D9AF00AF8DC1 /* OUYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */; };
+		3065D1241FEA3F3400AF8DC1 /* APIConfigRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */; };
 		30EBD2EF1FE247F700CCF7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */; };
 		30EBD2F11FE247F700CCF7FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD2F01FE247F700CCF7FE /* ViewController.swift */; };
 		30EBD2F41FE247F700CCF7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F21FE247F700CCF7FE /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		3065D1151FE8AD0000AF8DC1 /* Int+LPDBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+LPDBExtension.swift"; sourceTree = "<group>"; };
 		3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUYangTableViewCell.swift; sourceTree = "<group>"; };
 		3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUYWebViewController.swift; sourceTree = "<group>"; };
+		3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigRequest.swift; sourceTree = "<group>"; };
 		30EBD2EB1FE247F700CCF7FE /* 365physicaleducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 365physicaleducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30EBD2F01FE247F700CCF7FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */,
 				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
 				30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */,
+				3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */,
 				3354F9921FEA431800797808 /* JokeAPI.swift */,
 			);
 			path = http;
@@ -620,6 +623,7 @@
 				30EBD32F1FE3C5B800CCF7FE /* ResponseConvertible.swift in Sources */,
 				3065D11D1FE8AD0000AF8DC1 /* Int+LPDBExtension.swift in Sources */,
 				3065D1181FE8AD0000AF8DC1 /* UIColor+LPDBExtension.swift in Sources */,
+				3065D1241FEA3F3400AF8DC1 /* APIConfigRequest.swift in Sources */,
 				30EBD3321FE3C5B800CCF7FE /* APIConvertible.swift in Sources */,
 				3065D1201FE8B60300AF8DC1 /* OUYangTableViewCell.swift in Sources */,
 				3065D11A1FE8AD0000AF8DC1 /* Operator+LPDBExtension.swift in Sources */,
