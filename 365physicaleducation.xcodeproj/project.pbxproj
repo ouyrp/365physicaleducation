@@ -28,6 +28,10 @@
 		30EBD3321FE3C5B800CCF7FE /* APIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */; };
 		30EBD3331FE3C5B800CCF7FE /* HTTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */; };
 		30EBD3341FE3C5B800CCF7FE /* PDAPIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */; };
+		330594201FEA3BF900441AE9 /* Optional+Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3305941F1FEA3BF900441AE9 /* Optional+Snippet.swift */; };
+		3354F9931FEA431800797808 /* JokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9921FEA431800797808 /* JokeAPI.swift */; };
+		3354F9971FEA438200797808 /* JokeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9961FEA438200797808 /* JokeViewModel.swift */; };
+		3354F9991FEA43B300797808 /* JokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354F9981FEA43B300797808 /* JokeViewController.swift */; };
 		9ADD357844069DE67DEBA475 /* Pods_365physicaleducationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9B70752B5BD7B447BBE3D0 /* Pods_365physicaleducationUITests.framework */; };
 		AE23C0B67EA404FF8FBEC3FA /* Pods_365physicaleducationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA2C8784DD2609515360437 /* Pods_365physicaleducationTests.framework */; };
 		B3962E239EFE3B1D324EB89F /* Pods_365physicaleducation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */; };
@@ -79,6 +83,10 @@
 		30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConvertible.swift; sourceTree = "<group>"; };
 		30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPEngine.swift; sourceTree = "<group>"; };
 		30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDAPIConvertible.swift; sourceTree = "<group>"; };
+		3305941F1FEA3BF900441AE9 /* Optional+Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Snippet.swift"; sourceTree = "<group>"; };
+		3354F9921FEA431800797808 /* JokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeAPI.swift; sourceTree = "<group>"; };
+		3354F9961FEA438200797808 /* JokeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewModel.swift; sourceTree = "<group>"; };
+		3354F9981FEA43B300797808 /* JokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeViewController.swift; sourceTree = "<group>"; };
 		3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_365physicaleducation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4548CEB3F761F4CA8AB36217 /* Pods-365physicaleducationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducationTests/Pods-365physicaleducationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		71AE3F8A6E4A26DB8C2CE1F1 /* Pods-365physicaleducation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducation.release.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +135,7 @@
 				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
 				30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */,
 				3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */,
+				3354F9921FEA431800797808 /* JokeAPI.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -178,6 +187,8 @@
 		30EBD2ED1FE247F700CCF7FE /* 365physicaleducation */ = {
 			isa = PBXGroup;
 			children = (
+				3354F9941FEA435D00797808 /* Section */,
+				3305941E1FEA3BEF00441AE9 /* Snippet */,
 				3065D11E1FE8B5C000AF8DC1 /* controller */,
 				3065D10D1FE8ACED00AF8DC1 /* extension */,
 				3065D10C1FE8AC1500AF8DC1 /* http */,
@@ -206,6 +217,31 @@
 				30EBD3101FE247F700CCF7FE /* Info.plist */,
 			);
 			path = 365physicaleducationUITests;
+			sourceTree = "<group>";
+		};
+		3305941E1FEA3BEF00441AE9 /* Snippet */ = {
+			isa = PBXGroup;
+			children = (
+				3305941F1FEA3BF900441AE9 /* Optional+Snippet.swift */,
+			);
+			path = Snippet;
+			sourceTree = "<group>";
+		};
+		3354F9941FEA435D00797808 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				3354F9951FEA436600797808 /* Joke */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		3354F9951FEA436600797808 /* Joke */ = {
+			isa = PBXGroup;
+			children = (
+				3354F9961FEA438200797808 /* JokeViewModel.swift */,
+				3354F9981FEA43B300797808 /* JokeViewController.swift */,
+			);
+			path = Joke;
 			sourceTree = "<group>";
 		};
 		7485993EB5674B570B5F91F4 /* Pods */ = {
@@ -549,10 +585,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				30EBD3331FE3C5B800CCF7FE /* HTTPEngine.swift in Sources */,
+				3354F9971FEA438200797808 /* JokeViewModel.swift in Sources */,
 				30EBD3301FE3C5B800CCF7FE /* APILaugh.swift in Sources */,
 				30EBD3311FE3C5B800CCF7FE /* APIList.swift in Sources */,
 				30EBD2F11FE247F700CCF7FE /* ViewController.swift in Sources */,
 				3065D11B1FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift in Sources */,
+				3354F9991FEA43B300797808 /* JokeViewController.swift in Sources */,
+				330594201FEA3BF900441AE9 /* Optional+Snippet.swift in Sources */,
+				3354F9931FEA431800797808 /* JokeAPI.swift in Sources */,
 				3065D1221FE8D9AF00AF8DC1 /* OUYWebViewController.swift in Sources */,
 				30EBD3341FE3C5B800CCF7FE /* PDAPIConvertible.swift in Sources */,
 				30EBD32F1FE3C5B800CCF7FE /* ResponseConvertible.swift in Sources */,
