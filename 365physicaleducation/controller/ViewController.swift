@@ -23,7 +23,7 @@ extension ViewController:UITableViewDelegate, UITableViewDataSource {
         tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: {
             [weak self] in
             if let strongSelf = self {
-                strongSelf.pageid = "0";
+                strongSelf.pageid = 0;
                 strongSelf.loadData()
             }
         })
@@ -72,7 +72,7 @@ class ViewController: UIViewController {
     var bag = DisposeBag()
     var arrdata:[TestEntity] = []
     var newslist:NSMutableArray = NSMutableArray.init()
-    var pageid:NSString = "0"
+    var pageid: Int = 0
     
     
     override func viewDidLoad() {
@@ -96,13 +96,13 @@ class ViewController: UIViewController {
             .mapArray(TestEntity.self, path: "showapi_res_body.newslist")
             .subscribe(onNext: {
                 self.arrdata = $0
-                if self.pageid.intValue == 0{
+                if self.pageid == 0{
                     self.newslist.removeAllObjects()
                 }
                 self.newslist.addObjects(from: $0)
                 
                 if self.newslist.count % 15 == 0 {
-                    self.pageid = String(self.pageid.intValue + 1) as NSString
+                    self.pageid += 1
                 } else {
                     self.tableView.mj_footer.isHidden = true
                     self.tableView.mj_footer.endRefreshingWithNoMoreData()
