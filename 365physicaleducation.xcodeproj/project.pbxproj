@@ -140,11 +140,8 @@
 		3065D10C1FE8AC1500AF8DC1 /* http */ = {
 			isa = PBXGroup;
 			children = (
+				33FC60991FEA5BC900BA98EC /* Public */,
 				33FC60981FEA5B2400BA98EC /* API */,
-				30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */,
-				30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */,
-				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
-				30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */,
 			);
 			path = http;
 			sourceTree = "<group>";
@@ -161,14 +158,14 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		3065D11E1FE8B5C000AF8DC1 /* controller */ = {
+		3065D11E1FE8B5C000AF8DC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				30EBD2F01FE247F700CCF7FE /* ViewController.swift */,
 				3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */,
 				3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */,
 			);
-			path = controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		30EBD2E21FE247F700CCF7FE = {
@@ -198,7 +195,7 @@
 			children = (
 				3354F9941FEA435D00797808 /* Section */,
 				3305941E1FEA3BEF00441AE9 /* Snippet */,
-				3065D11E1FE8B5C000AF8DC1 /* controller */,
+				3065D11E1FE8B5C000AF8DC1 /* Controller */,
 				3065D10D1FE8ACED00AF8DC1 /* extension */,
 				3065D10C1FE8AC1500AF8DC1 /* http */,
 				30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */,
@@ -262,12 +259,23 @@
 		33FC60981FEA5B2400BA98EC /* API */ = {
 			isa = PBXGroup;
 			children = (
+				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
 				30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */,
 				30EBD32B1FE3C5B600CCF7FE /* APIList.swift */,
 				3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */,
 				3354F9921FEA431800797808 /* JokeAPI.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		33FC60991FEA5BC900BA98EC /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */,
+				30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */,
+				30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		7485993EB5674B570B5F91F4 /* Pods */ = {
