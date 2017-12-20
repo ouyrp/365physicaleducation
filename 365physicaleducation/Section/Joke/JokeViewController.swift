@@ -20,7 +20,7 @@ class JokeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "笑话精选"
         configInterface()
         setupBindings()
         viewModel.load()

@@ -15,23 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//<<<<<<< HEAD
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.rootViewController = JokeViewController()
-//        window?.makeKeyAndVisible()
-//        
-//        
-//=======
-//        HTTP.request(ConfigApi())
-//            .asObservable()
-//            .mapModel(ConfigEntity.self)
-//            .subscribe(onNext: {
-//                
-//            }, onError: {
-//                
-//            }).disposed(by: DisposeBag())
-//>>>>>>> origin/master
         
+        let tabbar = UITabBarController()
+        
+        tabbar.viewControllers = [
+            UINavigationController(rootViewController: ViewController()),
+            UINavigationController(rootViewController: JokeViewController())
+        ]
+        
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabbar
+        window?.makeKeyAndVisible()
+
         return true
     }
 
