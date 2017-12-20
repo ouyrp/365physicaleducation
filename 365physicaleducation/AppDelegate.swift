@@ -13,12 +13,16 @@ import RxSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
-        
-        
+        HTTP.request(ConfigApi())
+            .asObservable()
+            .mapModel(ConfigEntity.self)
+            .subscribe(onNext: {
+                
+            }, onError: {
+                
+            }).disposed(by: DisposeBag())
         
         return true
     }

@@ -10,7 +10,7 @@ import Foundation
 
 // 这个文件用来配置 请求通用的东西。。相当于一个配置文件
 
- 配置基础URL
+// 配置基础URL
 extension APIConvertible {
     func baseURL() -> String {
         return "http://route.showapi.com/"
