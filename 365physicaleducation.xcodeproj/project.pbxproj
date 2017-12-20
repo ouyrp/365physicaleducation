@@ -1,0 +1,870 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3065D1161FE8AD0000AF8DC1 /* Date+LPDBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D10E1FE8ACFF00AF8DC1 /* Date+LPDBExtension.swift */; };
+		3065D1181FE8AD0000AF8DC1 /* UIColor+LPDBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1101FE8ACFF00AF8DC1 /* UIColor+LPDBExtension.swift */; };
+		3065D11A1FE8AD0000AF8DC1 /* Operator+LPDBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1121FE8ACFF00AF8DC1 /* Operator+LPDBExtension.swift */; };
+		3065D11B1FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1131FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift */; };
+		3065D11D1FE8AD0000AF8DC1 /* Int+LPDBExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1151FE8AD0000AF8DC1 /* Int+LPDBExtension.swift */; };
+		3065D1201FE8B60300AF8DC1 /* OUYangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */; };
+		3065D1221FE8D9AF00AF8DC1 /* OUYWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */; };
+		30EBD2EF1FE247F700CCF7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */; };
+		30EBD2F11FE247F700CCF7FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD2F01FE247F700CCF7FE /* ViewController.swift */; };
+		30EBD2F41FE247F700CCF7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F21FE247F700CCF7FE /* Main.storyboard */; };
+		30EBD2F61FE247F700CCF7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F51FE247F700CCF7FE /* Assets.xcassets */; };
+		30EBD2F91FE247F700CCF7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */; };
+		30EBD3041FE247F700CCF7FE /* _65physicaleducationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD3031FE247F700CCF7FE /* _65physicaleducationTests.swift */; };
+		30EBD30F1FE247F700CCF7FE /* _65physicaleducationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD30E1FE247F700CCF7FE /* _65physicaleducationUITests.swift */; };
+		30EBD32F1FE3C5B800CCF7FE /* ResponseConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */; };
+		30EBD3301FE3C5B800CCF7FE /* APILaugh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */; };
+		30EBD3311FE3C5B800CCF7FE /* APIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32B1FE3C5B600CCF7FE /* APIList.swift */; };
+		30EBD3321FE3C5B800CCF7FE /* APIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */; };
+		30EBD3331FE3C5B800CCF7FE /* HTTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */; };
+		30EBD3341FE3C5B800CCF7FE /* PDAPIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */; };
+		9ADD357844069DE67DEBA475 /* Pods_365physicaleducationUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9B70752B5BD7B447BBE3D0 /* Pods_365physicaleducationUITests.framework */; };
+		AE23C0B67EA404FF8FBEC3FA /* Pods_365physicaleducationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA2C8784DD2609515360437 /* Pods_365physicaleducationTests.framework */; };
+		B3962E239EFE3B1D324EB89F /* Pods_365physicaleducation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30EBD3001FE247F700CCF7FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30EBD2E31FE247F700CCF7FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30EBD2EA1FE247F700CCF7FE;
+			remoteInfo = 365physicaleducation;
+		};
+		30EBD30B1FE247F700CCF7FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30EBD2E31FE247F700CCF7FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30EBD2EA1FE247F700CCF7FE;
+			remoteInfo = 365physicaleducation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C3EA6C5BF7673A6BE35275A /* Pods-365physicaleducationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducationTests/Pods-365physicaleducationTests.release.xcconfig"; sourceTree = "<group>"; };
+		3065D10E1FE8ACFF00AF8DC1 /* Date+LPDBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+LPDBExtension.swift"; sourceTree = "<group>"; };
+		3065D1101FE8ACFF00AF8DC1 /* UIColor+LPDBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+LPDBExtension.swift"; sourceTree = "<group>"; };
+		3065D1121FE8ACFF00AF8DC1 /* Operator+LPDBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operator+LPDBExtension.swift"; sourceTree = "<group>"; };
+		3065D1131FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+LPDBExtension.swift"; sourceTree = "<group>"; };
+		3065D1151FE8AD0000AF8DC1 /* Int+LPDBExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+LPDBExtension.swift"; sourceTree = "<group>"; };
+		3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUYangTableViewCell.swift; sourceTree = "<group>"; };
+		3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OUYWebViewController.swift; sourceTree = "<group>"; };
+		30EBD2EB1FE247F700CCF7FE /* 365physicaleducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 365physicaleducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30EBD2F01FE247F700CCF7FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		30EBD2F31FE247F700CCF7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30EBD2F51FE247F700CCF7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30EBD2F81FE247F700CCF7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30EBD2FA1FE247F700CCF7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EBD2FF1FE247F700CCF7FE /* 365physicaleducationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 365physicaleducationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EBD3031FE247F700CCF7FE /* _65physicaleducationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _65physicaleducationTests.swift; sourceTree = "<group>"; };
+		30EBD3051FE247F700CCF7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EBD30A1FE247F700CCF7FE /* 365physicaleducationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 365physicaleducationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30EBD30E1FE247F700CCF7FE /* _65physicaleducationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _65physicaleducationUITests.swift; sourceTree = "<group>"; };
+		30EBD3101FE247F700CCF7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseConvertible.swift; sourceTree = "<group>"; };
+		30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILaugh.swift; sourceTree = "<group>"; };
+		30EBD32B1FE3C5B600CCF7FE /* APIList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIList.swift; sourceTree = "<group>"; };
+		30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConvertible.swift; sourceTree = "<group>"; };
+		30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPEngine.swift; sourceTree = "<group>"; };
+		30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDAPIConvertible.swift; sourceTree = "<group>"; };
+		3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_365physicaleducation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4548CEB3F761F4CA8AB36217 /* Pods-365physicaleducationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducationTests/Pods-365physicaleducationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		71AE3F8A6E4A26DB8C2CE1F1 /* Pods-365physicaleducation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducation.release.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation.release.xcconfig"; sourceTree = "<group>"; };
+		8729F8004A9EE690DC095DFC /* Pods-365physicaleducation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation.debug.xcconfig"; sourceTree = "<group>"; };
+		8C61EDEC7F0415EB2E65C592 /* Pods-365physicaleducationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducationUITests/Pods-365physicaleducationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAA2C8784DD2609515360437 /* Pods_365physicaleducationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_365physicaleducationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB9B70752B5BD7B447BBE3D0 /* Pods_365physicaleducationUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_365physicaleducationUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC23CD6E88AAB4904D0FDA35 /* Pods-365physicaleducationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-365physicaleducationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-365physicaleducationUITests/Pods-365physicaleducationUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30EBD2E81FE247F700CCF7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3962E239EFE3B1D324EB89F /* Pods_365physicaleducation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EBD2FC1FE247F700CCF7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE23C0B67EA404FF8FBEC3FA /* Pods_365physicaleducationTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EBD3071FE247F700CCF7FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ADD357844069DE67DEBA475 /* Pods_365physicaleducationUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3065D10C1FE8AC1500AF8DC1 /* http */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */,
+				30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */,
+				30EBD32B1FE3C5B600CCF7FE /* APIList.swift */,
+				30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */,
+				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
+				30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */,
+			);
+			path = http;
+			sourceTree = "<group>";
+		};
+		3065D10D1FE8ACED00AF8DC1 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				3065D1131FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift */,
+				3065D10E1FE8ACFF00AF8DC1 /* Date+LPDBExtension.swift */,
+				3065D1151FE8AD0000AF8DC1 /* Int+LPDBExtension.swift */,
+				3065D1121FE8ACFF00AF8DC1 /* Operator+LPDBExtension.swift */,
+				3065D1101FE8ACFF00AF8DC1 /* UIColor+LPDBExtension.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		3065D11E1FE8B5C000AF8DC1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD2F01FE247F700CCF7FE /* ViewController.swift */,
+				3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */,
+				3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		30EBD2E21FE247F700CCF7FE = {
+			isa = PBXGroup;
+			children = (
+				30EBD2ED1FE247F700CCF7FE /* 365physicaleducation */,
+				30EBD3021FE247F700CCF7FE /* 365physicaleducationTests */,
+				30EBD30D1FE247F700CCF7FE /* 365physicaleducationUITests */,
+				30EBD2EC1FE247F700CCF7FE /* Products */,
+				7485993EB5674B570B5F91F4 /* Pods */,
+				CF3E409D73B712E0DE71EDD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30EBD2EC1FE247F700CCF7FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD2EB1FE247F700CCF7FE /* 365physicaleducation.app */,
+				30EBD2FF1FE247F700CCF7FE /* 365physicaleducationTests.xctest */,
+				30EBD30A1FE247F700CCF7FE /* 365physicaleducationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30EBD2ED1FE247F700CCF7FE /* 365physicaleducation */ = {
+			isa = PBXGroup;
+			children = (
+				3065D11E1FE8B5C000AF8DC1 /* controller */,
+				3065D10D1FE8ACED00AF8DC1 /* extension */,
+				3065D10C1FE8AC1500AF8DC1 /* http */,
+				30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */,
+				30EBD2F21FE247F700CCF7FE /* Main.storyboard */,
+				30EBD2F51FE247F700CCF7FE /* Assets.xcassets */,
+				30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */,
+				30EBD2FA1FE247F700CCF7FE /* Info.plist */,
+			);
+			path = 365physicaleducation;
+			sourceTree = "<group>";
+		};
+		30EBD3021FE247F700CCF7FE /* 365physicaleducationTests */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD3031FE247F700CCF7FE /* _65physicaleducationTests.swift */,
+				30EBD3051FE247F700CCF7FE /* Info.plist */,
+			);
+			path = 365physicaleducationTests;
+			sourceTree = "<group>";
+		};
+		30EBD30D1FE247F700CCF7FE /* 365physicaleducationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				30EBD30E1FE247F700CCF7FE /* _65physicaleducationUITests.swift */,
+				30EBD3101FE247F700CCF7FE /* Info.plist */,
+			);
+			path = 365physicaleducationUITests;
+			sourceTree = "<group>";
+		};
+		7485993EB5674B570B5F91F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8729F8004A9EE690DC095DFC /* Pods-365physicaleducation.debug.xcconfig */,
+				71AE3F8A6E4A26DB8C2CE1F1 /* Pods-365physicaleducation.release.xcconfig */,
+				4548CEB3F761F4CA8AB36217 /* Pods-365physicaleducationTests.debug.xcconfig */,
+				1C3EA6C5BF7673A6BE35275A /* Pods-365physicaleducationTests.release.xcconfig */,
+				8C61EDEC7F0415EB2E65C592 /* Pods-365physicaleducationUITests.debug.xcconfig */,
+				EC23CD6E88AAB4904D0FDA35 /* Pods-365physicaleducationUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CF3E409D73B712E0DE71EDD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E856C8CB01C66C0050871E0 /* Pods_365physicaleducation.framework */,
+				CAA2C8784DD2609515360437 /* Pods_365physicaleducationTests.framework */,
+				EB9B70752B5BD7B447BBE3D0 /* Pods_365physicaleducationUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30EBD2EA1FE247F700CCF7FE /* 365physicaleducation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30EBD3131FE247F700CCF7FE /* Build configuration list for PBXNativeTarget "365physicaleducation" */;
+			buildPhases = (
+				C6DD7BD506094C9B84FFA038 /* [CP] Check Pods Manifest.lock */,
+				30EBD2E71FE247F700CCF7FE /* Sources */,
+				30EBD2E81FE247F700CCF7FE /* Frameworks */,
+				30EBD2E91FE247F700CCF7FE /* Resources */,
+				9C0EDACC6B4C0F952190BE56 /* [CP] Embed Pods Frameworks */,
+				79891B0EEF29A8ED6D1CCCB0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 365physicaleducation;
+			productName = 365physicaleducation;
+			productReference = 30EBD2EB1FE247F700CCF7FE /* 365physicaleducation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30EBD2FE1FE247F700CCF7FE /* 365physicaleducationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30EBD3161FE247F700CCF7FE /* Build configuration list for PBXNativeTarget "365physicaleducationTests" */;
+			buildPhases = (
+				2A40EDD6958812BD8073F9FF /* [CP] Check Pods Manifest.lock */,
+				30EBD2FB1FE247F700CCF7FE /* Sources */,
+				30EBD2FC1FE247F700CCF7FE /* Frameworks */,
+				30EBD2FD1FE247F700CCF7FE /* Resources */,
+				F6235450512E3DD4F1C676A8 /* [CP] Embed Pods Frameworks */,
+				085D20E9D80FEB88BCB53CD5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30EBD3011FE247F700CCF7FE /* PBXTargetDependency */,
+			);
+			name = 365physicaleducationTests;
+			productName = 365physicaleducationTests;
+			productReference = 30EBD2FF1FE247F700CCF7FE /* 365physicaleducationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		30EBD3091FE247F700CCF7FE /* 365physicaleducationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30EBD3191FE247F700CCF7FE /* Build configuration list for PBXNativeTarget "365physicaleducationUITests" */;
+			buildPhases = (
+				B01014D8CA1C0C6480212A92 /* [CP] Check Pods Manifest.lock */,
+				30EBD3061FE247F700CCF7FE /* Sources */,
+				30EBD3071FE247F700CCF7FE /* Frameworks */,
+				30EBD3081FE247F700CCF7FE /* Resources */,
+				A74B5A98F23782A2807C789C /* [CP] Embed Pods Frameworks */,
+				6946A4CB0131644958562167 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30EBD30C1FE247F700CCF7FE /* PBXTargetDependency */,
+			);
+			name = 365physicaleducationUITests;
+			productName = 365physicaleducationUITests;
+			productReference = 30EBD30A1FE247F700CCF7FE /* 365physicaleducationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30EBD2E31FE247F700CCF7FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ouyang;
+				TargetAttributes = {
+					30EBD2EA1FE247F700CCF7FE = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					30EBD2FE1FE247F700CCF7FE = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 30EBD2EA1FE247F700CCF7FE;
+					};
+					30EBD3091FE247F700CCF7FE = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 30EBD2EA1FE247F700CCF7FE;
+					};
+				};
+			};
+			buildConfigurationList = 30EBD2E61FE247F700CCF7FE /* Build configuration list for PBXProject "365physicaleducation" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30EBD2E21FE247F700CCF7FE;
+			productRefGroup = 30EBD2EC1FE247F700CCF7FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30EBD2EA1FE247F700CCF7FE /* 365physicaleducation */,
+				30EBD2FE1FE247F700CCF7FE /* 365physicaleducationTests */,
+				30EBD3091FE247F700CCF7FE /* 365physicaleducationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30EBD2E91FE247F700CCF7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EBD2F91FE247F700CCF7FE /* LaunchScreen.storyboard in Resources */,
+				30EBD2F61FE247F700CCF7FE /* Assets.xcassets in Resources */,
+				30EBD2F41FE247F700CCF7FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EBD2FD1FE247F700CCF7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EBD3081FE247F700CCF7FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		085D20E9D80FEB88BCB53CD5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducationTests/Pods-365physicaleducationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A40EDD6958812BD8073F9FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-365physicaleducationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6946A4CB0131644958562167 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducationUITests/Pods-365physicaleducationUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79891B0EEF29A8ED6D1CCCB0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C0EDACC6B4C0F952190BE56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/MBMotion/MBMotion.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBMotion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducation/Pods-365physicaleducation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A74B5A98F23782A2807C789C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducationUITests/Pods-365physicaleducationUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B01014D8CA1C0C6480212A92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-365physicaleducationUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6DD7BD506094C9B84FFA038 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-365physicaleducation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6235450512E3DD4F1C676A8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-365physicaleducationTests/Pods-365physicaleducationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30EBD2E71FE247F700CCF7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EBD3331FE3C5B800CCF7FE /* HTTPEngine.swift in Sources */,
+				30EBD3301FE3C5B800CCF7FE /* APILaugh.swift in Sources */,
+				30EBD3311FE3C5B800CCF7FE /* APIList.swift in Sources */,
+				30EBD2F11FE247F700CCF7FE /* ViewController.swift in Sources */,
+				3065D11B1FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift in Sources */,
+				3065D1221FE8D9AF00AF8DC1 /* OUYWebViewController.swift in Sources */,
+				30EBD3341FE3C5B800CCF7FE /* PDAPIConvertible.swift in Sources */,
+				30EBD32F1FE3C5B800CCF7FE /* ResponseConvertible.swift in Sources */,
+				3065D11D1FE8AD0000AF8DC1 /* Int+LPDBExtension.swift in Sources */,
+				3065D1181FE8AD0000AF8DC1 /* UIColor+LPDBExtension.swift in Sources */,
+				30EBD3321FE3C5B800CCF7FE /* APIConvertible.swift in Sources */,
+				3065D1201FE8B60300AF8DC1 /* OUYangTableViewCell.swift in Sources */,
+				3065D11A1FE8AD0000AF8DC1 /* Operator+LPDBExtension.swift in Sources */,
+				3065D1161FE8AD0000AF8DC1 /* Date+LPDBExtension.swift in Sources */,
+				30EBD2EF1FE247F700CCF7FE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EBD2FB1FE247F700CCF7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EBD3041FE247F700CCF7FE /* _65physicaleducationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30EBD3061FE247F700CCF7FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30EBD30F1FE247F700CCF7FE /* _65physicaleducationUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30EBD3011FE247F700CCF7FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30EBD2EA1FE247F700CCF7FE /* 365physicaleducation */;
+			targetProxy = 30EBD3001FE247F700CCF7FE /* PBXContainerItemProxy */;
+		};
+		30EBD30C1FE247F700CCF7FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30EBD2EA1FE247F700CCF7FE /* 365physicaleducation */;
+			targetProxy = 30EBD30B1FE247F700CCF7FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		30EBD2F21FE247F700CCF7FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30EBD2F31FE247F700CCF7FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30EBD2F81FE247F700CCF7FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30EBD3111FE247F700CCF7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		30EBD3121FE247F700CCF7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30EBD3141FE247F700CCF7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8729F8004A9EE690DC095DFC /* Pods-365physicaleducation.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZD69NW5699;
+				INFOPLIST_FILE = 365physicaleducation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30EBD3151FE247F700CCF7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71AE3F8A6E4A26DB8C2CE1F1 /* Pods-365physicaleducation.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZD69NW5699;
+				INFOPLIST_FILE = 365physicaleducation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducation";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		30EBD3171FE247F700CCF7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4548CEB3F761F4CA8AB36217 /* Pods-365physicaleducationTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZD69NW5699;
+				INFOPLIST_FILE = 365physicaleducationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/365physicaleducation.app/365physicaleducation";
+			};
+			name = Debug;
+		};
+		30EBD3181FE247F700CCF7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C3EA6C5BF7673A6BE35275A /* Pods-365physicaleducationTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZD69NW5699;
+				INFOPLIST_FILE = 365physicaleducationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducationTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/365physicaleducation.app/365physicaleducation";
+			};
+			name = Release;
+		};
+		30EBD31A1FE247F700CCF7FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C61EDEC7F0415EB2E65C592 /* Pods-365physicaleducationUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZD69NW5699;
+				INFOPLIST_FILE = 365physicaleducationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 365physicaleducation;
+			};
+			name = Debug;
+		};
+		30EBD31B1FE247F700CCF7FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC23CD6E88AAB4904D0FDA35 /* Pods-365physicaleducationUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZD69NW5699;
+				INFOPLIST_FILE = 365physicaleducationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ouyang-physicaleducation.-65physicaleducationUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = 365physicaleducation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30EBD2E61FE247F700CCF7FE /* Build configuration list for PBXProject "365physicaleducation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EBD3111FE247F700CCF7FE /* Debug */,
+				30EBD3121FE247F700CCF7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30EBD3131FE247F700CCF7FE /* Build configuration list for PBXNativeTarget "365physicaleducation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EBD3141FE247F700CCF7FE /* Debug */,
+				30EBD3151FE247F700CCF7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30EBD3161FE247F700CCF7FE /* Build configuration list for PBXNativeTarget "365physicaleducationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EBD3171FE247F700CCF7FE /* Debug */,
+				30EBD3181FE247F700CCF7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30EBD3191FE247F700CCF7FE /* Build configuration list for PBXNativeTarget "365physicaleducationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30EBD31A1FE247F700CCF7FE /* Debug */,
+				30EBD31B1FE247F700CCF7FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30EBD2E31FE247F700CCF7FE /* Project object */;
+}
