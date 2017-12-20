@@ -19,9 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .asObservable()
             .mapModel(ConfigEntity.self)
             .subscribe(onNext: {
-                
+                print($0)
             }, onError: {
-                
+                print($0)
             }).disposed(by: DisposeBag())
         
         return true
