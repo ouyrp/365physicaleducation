@@ -13,12 +13,13 @@ import Foundation
 
 struct TestApi: PDAPIConvertible {
     var path = "196-1"
-    var page:NSString?
+    var page: Int = 0
+    
     func parameters() -> [String : Any] {
         return ["showapi_appid":"52061",
                 "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
                 "num": "15",
-                "page":page ?? "1"]
+                "page":"\(page)"]
     }
 }
 
