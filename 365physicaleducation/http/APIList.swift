@@ -23,7 +23,6 @@ struct TestApi: PDAPIConvertible {
     }
 }
 
-
 struct TestEntity: Codable {
     var description: String
     var picUrl: String
