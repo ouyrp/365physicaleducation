@@ -20,7 +20,7 @@ protocol APIConvertible {
     func baseURL() -> String
     func method() -> HTTPMethod
     func headers() -> HTTPHeaders?
-    func parameters() -> [String: Any]
+    func parameters() -> [String: Any]?
     func timeoutInterval() -> TimeInterval
     
     /// Request url

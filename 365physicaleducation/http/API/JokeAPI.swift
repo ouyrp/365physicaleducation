@@ -9,18 +9,18 @@
 import Foundation
 
 struct JokeAPI: PDAPIConvertible {
+    func parameters() -> [String : Any]? {
+        return ["showapi_appid":"52061",
+                "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
+                "num": "15",
+                "page":"\(page)"]
+    }
+    
     var path = "341-1"
     var page: Int = 1
     
     init(with page: Int) {
         self.page = page
-    }
-    
-    func parameters() -> [String : Any] {
-        return ["showapi_appid":"52061",
-                "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
-                "num": "15",
-                "page":"\(page)"]
     }
 }
 

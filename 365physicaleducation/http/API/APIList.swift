@@ -12,14 +12,18 @@
 import Foundation
 
 struct TestApi: PDAPIConvertible {
-    var path = "196-1"
-    var page: Int = 0
-    
-    func parameters() -> [String : Any] {
+    func parameters() -> [String : Any]? {
         return ["showapi_appid":"52061",
                 "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
                 "num": "15",
                 "page":"\(page)"]
+    }
+    
+    var path = "196-1"
+    var page: Int = 0
+    
+    init(with page: Int) {
+        self.page = page
     }
 }
 

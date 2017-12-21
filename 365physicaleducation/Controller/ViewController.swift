@@ -88,28 +88,34 @@ class ViewController: UIViewController {
     }
     
     fileprivate func loadData(){
-        var request = TestApi()
-        request.page = pageid
-        HTTP.request(request)
+        HTTP.request(TestApi(with:pageid))
             .asObservable()
             .mapArray(TestEntity.self, path: "showapi_res_body.newslist")
             .subscribe(onNext: {
-                self.arrdata = $0
-                if self.pageid == 0{
-                    self.newslist.removeAllObjects()
+                [weak self] in
+                if let strongSelf = self {
+                    strongSelf.arrdata = $0
+                    if strongSelf.pageid == 0{
+                        strongSelf.newslist.removeAllObjects()
+                    }
+                    strongSelf.newslist.addObjects(from: $0)
+                    
+                    if strongSelf.newslist.count % 15 == 0 {
+                        strongSelf.pageid += 1
+                    } else {
+                        strongSelf.tableView.mj_footer.isHidden = true
+                        strongSelf.tableView.mj_footer.endRefreshingWithNoMoreData()
+                    }
+                    strongSelf.tableView.reloadData()
+                    strongSelf.tableView.mj_header.endRefreshing()
+                    strongSelf.tableView.mj_footer.endRefreshing()
                 }
-                self.newslist.addObjects(from: $0)
-                
-                if self.newslist.count % 15 == 0 {
-                    self.pageid += 1
-                } else {
-                    self.tableView.mj_footer.isHidden = true
-                    self.tableView.mj_footer.endRefreshingWithNoMoreData()
-                }
-                self.tableView.reloadData()
-                self.tableView.mj_header.endRefreshing()
-                self.tableView.mj_footer.endRefreshing()
             }, onError: {
+                [weak self] in
+                if let strongSelf = self {
+                    strongSelf.tableView.mj_header.endRefreshing()
+                    strongSelf.tableView.mj_footer.endRefreshing()
+                }
                 print($0)
             }).disposed(by: DisposeBag())
     }

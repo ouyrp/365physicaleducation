@@ -46,7 +46,6 @@ class JokeViewController: UIViewController {
     
     // 设置 ViewModel
     func setupBindings() {
-        
         viewModel.output
             .asObserver()
             .subscribe(onNext: { [weak self] in

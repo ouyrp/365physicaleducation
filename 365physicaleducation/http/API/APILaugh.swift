@@ -9,12 +9,13 @@
 import Foundation
 
 struct LaughApi: PDAPIConvertible {
-    var path = "341-1"
-    func parameters() -> [String : Any] {
+    func parameters() -> [String : Any]? {
         return ["showapi_appid":"52061",
                 "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
                 "num": "10"]
     }
+    
+    var path = "341-1"
 }
 
 
