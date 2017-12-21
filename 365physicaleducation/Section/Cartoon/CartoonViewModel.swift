@@ -20,6 +20,7 @@ final class CartoonViewModel {
     }
 
     private var currantPage: Int = 1
+    var cartoonList: [CartoonEntity] = []
     
     func load(_ more: Bool = false) {
         
@@ -28,19 +29,18 @@ final class CartoonViewModel {
         } else {
             currantPage = 1
         }
-        
-        HTTP.request(CartoonAPI(with: currantPage))
+
+        HTTP.request(CartoonAPI(with: currantPage, type: type))
             .asObservable()
-//            .mapArray(JokeEntity.self, path: "showapi_res_body.contentlist")
-            .mapJSON()
-            .subscribe(onNext: { [weak self] _ in
-                
-//                if more {
-//                    self?.jokeList.append(contentsOf: $0)
-//                } else {
-//                    self?.jokeList = $0
-//                }
-//                self?.output.onNext(true)
+            .mapArray(CartoonEntity.self, path: "showapi_res_body.pagebean.contentlist")
+            .subscribe(onNext: { [weak self] in
+
+                if more {
+                    self?.cartoonList.append(contentsOf: $0)
+                } else {
+                    self?.cartoonList = $0
+                }
+                self?.output.onNext(true)
 //
                 }, onError: { [weak self] in
                     

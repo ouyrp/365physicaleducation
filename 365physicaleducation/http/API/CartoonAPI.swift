@@ -10,12 +10,13 @@ import Foundation
 
 // MMP 接口定义用的是拼音
 enum CartoonType: String {
-    case kongbu = "/category/weimanhua/kbmh"        // 恐怖漫画
+    case kongbu = "/category/weimanhua/kbmh"       // 恐怖漫画
     case gushi = "/category/weimanhua/gushimanhua" // 故事漫画
     case duanzi = "/category/duanzishou"           // 段子手
     case lenzhishi = "/category/lengzhishi"        // 冷知识
     case qiqu = "/category/weimanhua/qiqu"         // 奇趣
-    case gaoxiao = "/category/gaoxiao"             // 电影
+     case dianying = "/category/dianying"          // 电影
+    case gaoxiao = "/category/gaoxiao"             // 搞笑
     case mengchong = "/category/mengchong"         // 萌宠
     case xinqi = "/category/xinqi"                 // 新奇
     case huanqiu = "/category/huanqiu"             // 环球
@@ -37,9 +38,30 @@ struct CartoonAPI: PDAPIConvertible {
     var page: Int = 1
     var type: CartoonType = .kongbu
     
-    init(with page: Int) {
+    init(with page: Int, type: CartoonType) {
         self.page = page
+        self.type = type
     }
 
+    func method() -> HTTPMethod {
+        return .post
+    }
     
 }
+
+struct CartoonEntity: Codable {
+    var thumbnailList: [String] = []
+    var link: String = ""
+    var title: String = ""
+    var id: String = ""
+    var time: String = ""
+}
+
+
+
+
+
+
+
+
+

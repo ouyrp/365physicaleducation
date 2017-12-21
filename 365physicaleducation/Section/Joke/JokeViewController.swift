@@ -73,13 +73,3 @@ extension JokeViewController: UITableViewDataSource {
         return cell
     }
 }
-
-
-extension JokeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let web = OUYWebViewController()
-        web.gankURL = "http://heibaimanhua.com/weimanhua/kbmh/94615.html"
-        web.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(web, animated: true)
-    }
-}
