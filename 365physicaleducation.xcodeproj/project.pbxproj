@@ -22,7 +22,6 @@
 		30EBD3041FE247F700CCF7FE /* _65physicaleducationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD3031FE247F700CCF7FE /* _65physicaleducationTests.swift */; };
 		30EBD30F1FE247F700CCF7FE /* _65physicaleducationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD30E1FE247F700CCF7FE /* _65physicaleducationUITests.swift */; };
 		30EBD32F1FE3C5B800CCF7FE /* ResponseConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */; };
-		30EBD3301FE3C5B800CCF7FE /* APILaugh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */; };
 		30EBD3311FE3C5B800CCF7FE /* APIList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32B1FE3C5B600CCF7FE /* APIList.swift */; };
 		30EBD3321FE3C5B800CCF7FE /* APIConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */; };
 		30EBD3331FE3C5B800CCF7FE /* HTTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */; };
@@ -98,7 +97,6 @@
 		30EBD30E1FE247F700CCF7FE /* _65physicaleducationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _65physicaleducationUITests.swift; sourceTree = "<group>"; };
 		30EBD3101FE247F700CCF7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30EBD3291FE3C5B500CCF7FE /* ResponseConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseConvertible.swift; sourceTree = "<group>"; };
-		30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILaugh.swift; sourceTree = "<group>"; };
 		30EBD32B1FE3C5B600CCF7FE /* APIList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIList.swift; sourceTree = "<group>"; };
 		30EBD32C1FE3C5B700CCF7FE /* APIConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConvertible.swift; sourceTree = "<group>"; };
 		30EBD32D1FE3C5B700CCF7FE /* HTTPEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPEngine.swift; sourceTree = "<group>"; };
@@ -352,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				30EBD32E1FE3C5B800CCF7FE /* PDAPIConvertible.swift */,
-				30EBD32A1FE3C5B600CCF7FE /* APILaugh.swift */,
 				30EBD32B1FE3C5B600CCF7FE /* APIList.swift */,
 				3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */,
 				3354F9921FEA431800797808 /* JokeAPI.swift */,
@@ -719,7 +716,6 @@
 				30EBD3331FE3C5B800CCF7FE /* HTTPEngine.swift in Sources */,
 				33DAF7F01FEB929400FDB392 /* CartoonViewModel.swift in Sources */,
 				3354F9971FEA438200797808 /* JokeViewModel.swift in Sources */,
-				30EBD3301FE3C5B800CCF7FE /* APILaugh.swift in Sources */,
 				30EBD3311FE3C5B800CCF7FE /* APIList.swift in Sources */,
 				30EBD2F11FE247F700CCF7FE /* HomeViewController.swift in Sources */,
 				3065D11B1FE8AD0000AF8DC1 /* CGFloat+LPDBExtension.swift in Sources */,

@@ -29,7 +29,7 @@ struct CartoonAPI: PDAPIConvertible {
     func parameters() -> [String : Any]? {
         return ["showapi_appid":"52061",
                 "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
-                "num": "15",
+                "num": "6",
                 "page":"\(page)",
                 "type":type.rawValue]
     }
