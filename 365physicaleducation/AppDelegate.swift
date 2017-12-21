@@ -11,20 +11,10 @@ import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     let disposeBag = DisposeBag()
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        HTTP.request(ConfigApi())
-            .asObservable()
-            .mapModel(ConfigEntity.self)
-            .subscribe(onNext: {
-                print($0)
-            }, onError: {
-                print($0)
-            }).disposed(by: disposeBag)
-
         
         let tabbar = UITabBarController()
         
@@ -36,17 +26,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         jokecontroller.tabBarItem.title = "幽默笑话"
         jokecontroller.tabBarItem.image = UIImage.init(named: "jokeitem")
         
+        let cartooncontroller = CartoonController()
+        cartooncontroller.tabBarItem.title = "黑白漫画"
+        cartooncontroller.tabBarItem.image = UIImage.init(named: "jokeitem")
+        
         tabbar.viewControllers = [
-            UINavigationController(rootViewController: ViewController()),
-            UINavigationController(rootViewController: JokeViewController()),
-            UINavigationController(rootViewController: CartoonController())
-
+            UINavigationController(rootViewController: homecontroller),
+            UINavigationController(rootViewController: jokecontroller),
+            UINavigationController(rootViewController: cartooncontroller)
         ]
         
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = tabbar
-        window?.makeKeyAndVisible()
+        HTTP.request(ConfigApi())
+            .asObservable()
+            .mapModel(ConfigEntity.self)
+            .subscribe(onNext: {
+                [weak self] in
+                if let strongSelf = self {
+                    if $0.on_status == "0" {
+                        strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
+                        strongSelf.window?.rootViewController = tabbar
+                        strongSelf.window?.makeKeyAndVisible()
+                    }else {
+                        let webcontroller = OUYWebViewController()
+                        webcontroller.gankURL = $0.on_url
+                        strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
+                        strongSelf.window?.rootViewController = webcontroller
+                        strongSelf.window?.makeKeyAndVisible()
+                    }
+                }
+                print($0)
+                }, onError: {
+                    print($0)
+            }).disposed(by: disposeBag)
         
         let type: UInt = UIUserNotificationType.alert.rawValue | UIUserNotificationType.sound.rawValue | UIUserNotificationType.badge.rawValue
         JPUSHService.register(forRemoteNotificationTypes: type, categories: nil)
@@ -82,29 +93,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.applicationIconBadgeNumber = 0
         application.cancelAllLocalNotifications()
     }
-
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
-
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
-
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    
 }
 
