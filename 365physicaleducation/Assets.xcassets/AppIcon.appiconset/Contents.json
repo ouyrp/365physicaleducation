@@ -51,14 +51,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "365-1.png",
-      "scale" : "1x"
-    },
-    {
-      "size" : "1024x1024",
-      "idiom" : "ios-marketing",
       "filename" : "365.png",
-      "unassigned" : true,
       "scale" : "1x"
     }
   ],
