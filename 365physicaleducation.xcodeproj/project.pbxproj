@@ -158,14 +158,14 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		3065D11E1FE8B5C000AF8DC1 /* Controller */ = {
+		3065D1291FEB9AD700AF8DC1 /* main */ = {
 			isa = PBXGroup;
 			children = (
 				30EBD2F01FE247F700CCF7FE /* ViewController.swift */,
 				3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */,
 				3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */,
 			);
-			path = Controller;
+			path = main;
 			sourceTree = "<group>";
 		};
 		30EBD2E21FE247F700CCF7FE = {
@@ -196,7 +196,6 @@
 				3065D1251FEA673D00AF8DC1 /* 365physicaleducation.entitlements */,
 				3354F9941FEA435D00797808 /* Section */,
 				3305941E1FEA3BEF00441AE9 /* Snippet */,
-				3065D11E1FE8B5C000AF8DC1 /* Controller */,
 				3065D10D1FE8ACED00AF8DC1 /* extension */,
 				3065D10C1FE8AC1500AF8DC1 /* http */,
 				30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */,
@@ -240,6 +239,7 @@
 		3354F9941FEA435D00797808 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				3065D1291FEB9AD700AF8DC1 /* main */,
 				3354F9951FEA436600797808 /* Joke */,
 			);
 			path = Section;
