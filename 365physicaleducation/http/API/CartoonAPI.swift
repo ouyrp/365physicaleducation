@@ -25,21 +25,21 @@ enum CartoonType: String {
 }
 
 struct CartoonAPI: PDAPIConvertible {
-    var path = "958-1"
-    
-    var page: Int = 1
-    var type: CartoonType = .kongbu
-    
-    init(with page: Int) {
-        self.page = page
-    }
-    
-    func parameters() -> [String : Any] {
+    func parameters() -> [String : Any]? {
         return ["showapi_appid":"52061",
                 "showapi_sign":"ea8cb6970d834a6f89a3d5509f369ea1",
                 "num": "15",
                 "page":"\(page)",
                 "type":type.rawValue]
     }
+    
+    var path = "958-1"
+    var page: Int = 1
+    var type: CartoonType = .kongbu
+    
+    init(with page: Int) {
+        self.page = page
+    }
+
     
 }

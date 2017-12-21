@@ -27,10 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let tabbar = UITabBarController()
         
+        let homecontroller = ViewController()
+        homecontroller.tabBarItem.title = "体育资讯"
+        homecontroller.tabBarItem.image = UIImage.init(named: "homeitem")
+        
+        let jokecontroller = JokeViewController()
+        jokecontroller.tabBarItem.title = "幽默笑话"
+        jokecontroller.tabBarItem.image = UIImage.init(named: "jokeitem")
+        
         tabbar.viewControllers = [
             UINavigationController(rootViewController: ViewController()),
             UINavigationController(rootViewController: JokeViewController()),
             UINavigationController(rootViewController: CartoonController())
+
         ]
         
         

@@ -17,7 +17,6 @@
 		3065D1241FEA3F3400AF8DC1 /* APIConfigRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3065D1231FEA3F3400AF8DC1 /* APIConfigRequest.swift */; };
 		30EBD2EF1FE247F700CCF7FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */; };
 		30EBD2F11FE247F700CCF7FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD2F01FE247F700CCF7FE /* ViewController.swift */; };
-		30EBD2F41FE247F700CCF7FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F21FE247F700CCF7FE /* Main.storyboard */; };
 		30EBD2F61FE247F700CCF7FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F51FE247F700CCF7FE /* Assets.xcassets */; };
 		30EBD2F91FE247F700CCF7FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */; };
 		30EBD3041FE247F700CCF7FE /* _65physicaleducationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EBD3031FE247F700CCF7FE /* _65physicaleducationTests.swift */; };
@@ -83,7 +82,6 @@
 		30EBD2EB1FE247F700CCF7FE /* 365physicaleducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 365physicaleducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30EBD2F01FE247F700CCF7FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		30EBD2F31FE247F700CCF7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30EBD2F51FE247F700CCF7FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30EBD2F81FE247F700CCF7FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30EBD2FA1FE247F700CCF7FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -176,14 +174,14 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		3065D11E1FE8B5C000AF8DC1 /* Controller */ = {
+		3065D1291FEB9AD700AF8DC1 /* main */ = {
 			isa = PBXGroup;
 			children = (
 				30EBD2F01FE247F700CCF7FE /* ViewController.swift */,
 				3065D11F1FE8B60300AF8DC1 /* OUYangTableViewCell.swift */,
 				3065D1211FE8D9AF00AF8DC1 /* OUYWebViewController.swift */,
 			);
-			path = Controller;
+			path = main;
 			sourceTree = "<group>";
 		};
 		30EBD2E21FE247F700CCF7FE = {
@@ -215,12 +213,10 @@
 				3065D1251FEA673D00AF8DC1 /* 365physicaleducation.entitlements */,
 				3354F9941FEA435D00797808 /* Section */,
 				3305941E1FEA3BEF00441AE9 /* Snippet */,
-				3065D11E1FE8B5C000AF8DC1 /* Controller */,
 				3065D10D1FE8ACED00AF8DC1 /* extension */,
 				3065D10C1FE8AC1500AF8DC1 /* http */,
 				30EBD2EE1FE247F700CCF7FE /* AppDelegate.swift */,
 				3065D1261FEA6DDF00AF8DC1 /* JPushDemo-Bridging-Header.h */,
-				30EBD2F21FE247F700CCF7FE /* Main.storyboard */,
 				30EBD2F51FE247F700CCF7FE /* Assets.xcassets */,
 				30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */,
 				30EBD2FA1FE247F700CCF7FE /* Info.plist */,
@@ -260,7 +256,11 @@
 		3354F9941FEA435D00797808 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+
 				33DAF7EA1FEB927400FDB392 /* Cartoon */,
+
+				3065D1291FEB9AD700AF8DC1 /* main */,
+
 				3354F9951FEA436600797808 /* Joke */,
 			);
 			path = Section;
@@ -481,7 +481,6 @@
 				33DAF8041FEB9A4C00FDB392 /* CartoonViewController.xib in Resources */,
 				30EBD2F61FE247F700CCF7FE /* Assets.xcassets in Resources */,
 				3354F9A11FEA4E4400797808 /* JokeTableViewCell.xib in Resources */,
-				30EBD2F41FE247F700CCF7FE /* Main.storyboard in Resources */,
 				3354F99D1FEA4ADD00797808 /* JokeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,14 +748,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		30EBD2F21FE247F700CCF7FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				30EBD2F31FE247F700CCF7FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		30EBD2F71FE247F700CCF7FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

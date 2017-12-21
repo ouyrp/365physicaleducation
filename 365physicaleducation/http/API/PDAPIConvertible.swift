@@ -34,15 +34,9 @@ extension APIConvertible {
 // 配置请求 header
 extension APIConvertible {
     func headers() -> HTTPHeaders? {
-        return nil
-//        return [
-//            "os": "iOS 11.1",
-//            "version": "2.0.3",
-//            "Accept": "application/json",
-//            "Accept-Language": "en;q=1",
-//            "Content-Type": "application/json",
-//            "User-Agent": "Panda/2.0.3 (iPhone; iOS 11.1; Scale/3.00)"
-//        ]
+//        return nil
+        return ["X-Bmob-Application-Id": "a2d8ed021635d48469767d4aea5ff9e8",
+                "X-Bmob-REST-API-Key": "28708615d663b72656cbe919330ba46e"]
     }
 }
 
