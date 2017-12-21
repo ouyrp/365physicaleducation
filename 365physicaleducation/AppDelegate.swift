@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let cartooncontroller = CartoonController()
         cartooncontroller.tabBarItem.title = "黑白漫画"
-        cartooncontroller.tabBarItem.image = UIImage.init(named: "jokeitem")
+        cartooncontroller.tabBarItem.image = UIImage.init(named: "coritem")
         
         tabbar.viewControllers = [
             UINavigationController(rootViewController: homecontroller),
@@ -56,6 +56,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 print($0)
                 }, onError: {
+                    [weak self] in
+                    if let strongSelf = self {
+                        strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
+                        strongSelf.window?.rootViewController = tabbar
+                        strongSelf.window?.makeKeyAndVisible()
+                    }
                     print($0)
             }).disposed(by: disposeBag)
         
@@ -74,6 +80,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         JPUSHService.handleRemoteNotification(userInfo)
+        if userInfo.keys .contains("url" as NSObject) {
+            if let url = userInfo["url" as NSObject] {
+                noticeWebPush(url: url as! String)
+            }
+        }
+    }
+    
+    private func noticeWebPush(url: String) {
+        let controller = OUYWebViewController()
+        controller.gankURL = url
+        window?.rootViewController?.navigationController?.pushViewController(controller, animated: true)
     }
     
     private func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
