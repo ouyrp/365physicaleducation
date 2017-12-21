@@ -41,6 +41,7 @@ class CartoonViewController: UIViewController {
         tableView.sunny.config {
             $0.backgroundColor = UIColor.white
             $0.register(cellType: CartoonTableViewCell.self)
+            $0.rowHeight = UIScreen.main.bounds.size.width * 9 / 16
         }
         
         tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [unowned self] in
