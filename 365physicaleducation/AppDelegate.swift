@@ -29,7 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         tabbar.viewControllers = [
             UINavigationController(rootViewController: ViewController()),
-            UINavigationController(rootViewController: JokeViewController())
+            UINavigationController(rootViewController: JokeViewController()),
+            UINavigationController(rootViewController: CartoonController())
         ]
         
         

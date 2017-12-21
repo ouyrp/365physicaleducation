@@ -42,11 +42,7 @@ final class JokeViewModel {
                 self?.output.onNext(false)
                 
             }).disposed(by: bag)
-        
-        
     }
-    
-    
 }
 
 

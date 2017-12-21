@@ -26,12 +26,13 @@ public extension UIColor {
     /// 生成随机颜色
     ///
     /// - Returns: 返回随机颜色
-    class func random() -> UIColor {
-        
-        let r = CGFloat(arc4random_uniform(256))
-        let g = CGFloat(arc4random_uniform(256))
-        let b = CGFloat(arc4random_uniform(256))
-        return UIColor.colorWithRGB(r, g: g, b: b)
+    public static var randomColor: UIColor {
+        get {
+            let red = CGFloat(arc4random() % 256) / 255.0
+            let green = CGFloat(arc4random() % 256) / 255.0
+            let blue = CGFloat(arc4random() % 256) / 255.0
+            return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+        }
     }
     
     

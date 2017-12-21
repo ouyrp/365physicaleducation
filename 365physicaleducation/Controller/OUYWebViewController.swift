@@ -10,8 +10,9 @@ import UIKit
 import WebKit
 
 class OUYWebViewController: UIViewController, WKNavigationDelegate{
-    var webView: WKWebView!
-    public var gankURL: String!
+    private var webView: WKWebView!
+    var gankURL: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "新闻详情"

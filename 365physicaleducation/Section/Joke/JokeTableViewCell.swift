@@ -23,6 +23,7 @@ class JokeTableViewCell: UITableViewCell, NibReusable {
             titleLabel.text = joke.title
             contentLabel.text = joke.text
             createTimeLabel.text = joke.createTime
+//            contentView.backgroundColor = UIColor.random()
         }
     }
     
