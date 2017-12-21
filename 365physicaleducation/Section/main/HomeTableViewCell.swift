@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class OUYangTableViewCell: UITableViewCell {
     
@@ -54,7 +54,7 @@ class OUYangTableViewCell: UITableViewCell {
     }
     
     func setData(newData: TestEntity) {
-        newsImage.sd_setImage(with: NSURL.init(string: newData.picUrl) as! URL, completed: nil)
+        newsImage.kf.setImage(with: URL(string: newData.picUrl)!)
         labelTitle.text = newData.title
     }
 }

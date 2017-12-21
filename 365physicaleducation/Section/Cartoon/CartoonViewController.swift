@@ -32,6 +32,7 @@ class CartoonViewController: UIViewController {
         super.viewDidLoad()
         configInterface()
         setupBindings()
+        viewModel.load()
     }
 
     // 设置UI
@@ -39,7 +40,8 @@ class CartoonViewController: UIViewController {
         
         tableView.sunny.config {
             $0.backgroundColor = UIColor.white
-            $0.register(cellType: JokeTableViewCell.self)
+            $0.register(cellType: CartoonTableViewCell.self)
+            $0.rowHeight = UIScreen.main.bounds.size.width * 9 / 16
         }
         
         tableView.mj_header = MJRefreshNormalHeader(refreshingBlock: { [unowned self] in
@@ -67,18 +69,27 @@ class CartoonViewController: UIViewController {
                 
             }).disposed(by: bag)
     }
-    
-    
 
 }
 
 
 extension CartoonViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.cartoonList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(for: indexPath, cellType: JokeTableViewCell.self)
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: CartoonTableViewCell.self)
+        cell.cartoon = viewModel.cartoonList[indexPath.row]
+        return cell
+    }
+}
+
+extension CartoonViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let web = OUYWebViewController()
+        web.gankURL = viewModel.cartoonList[indexPath.row].link
+        web.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(web, animated: true)
     }
 }

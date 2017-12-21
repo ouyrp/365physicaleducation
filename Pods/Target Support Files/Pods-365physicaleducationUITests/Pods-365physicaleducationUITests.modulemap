@@ -1,0 +1,6 @@
+framework module Pods_365physicaleducationUITests {
+  umbrella header "Pods-365physicaleducationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

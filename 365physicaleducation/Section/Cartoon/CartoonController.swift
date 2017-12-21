@@ -8,40 +8,59 @@
 
 import UIKit
 
-class CartoonController: UIViewController {
+class CartoonController: WMPageController {
     
-    var slideTabKit: SlideTabKit = SlideTabKit()
-    var vcs: [UIViewController] = []
-    var titles: [String] =
-        ["恐怖漫画","故事漫画","段子手","冷知识",
-         "奇趣","电影","搞笑","萌宠","新奇",
-         "环球","摄影","玩艺","插画"]
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        preloadPolicy       = .near
+        pageAnimatable      = false
+        menuViewStyle       = .line
+        titleSizeSelected   = self.titleSizeNormal
+        showOnNavigationBar = false
+        dataSource          = self
+        titles = [
+            "恐怖","故事","段子手","冷知识",
+            "奇趣","电影","搞笑","萌宠","新奇",
+            "环球","摄影","玩艺","插画"]
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "黑白漫画"
-        
-        titles.forEach { _ in
-            let vc = CartoonViewController(.kongbu)
-            vc.view.backgroundColor = UIColor.randomColor
-            vcs.append(vc)
-        }
-        
-        view.addSubview(slideTabKit.slideTabBar)
-        slideTabKit.slideTabBar.snp.makeConstraints { (make) in
-            make.top.equalTo(topLayoutGuide.snp.bottom)
-            make.left.right.equalTo(view)
-            make.height.equalTo(40)
-        }
-        slideTabKit.slideTabBar.resetting(titles: titles)
-        
-        view.addSubview(slideTabKit.slideScrollView)
-        slideTabKit.slideScrollView.snp.makeConstraints { (make) in
-            make.top.equalTo(slideTabKit.slideTabBar.snp.bottom)
-            make.left.right.bottom.equalTo(view)
-        }
-        slideTabKit.slideScrollView.resetting(childViews: vcs.map({ (vc) -> UIView in
-            return vc.view
-        }))
     }
 }
+
+extension CartoonController {
+    override func numbersOfChildControllers(in pageController: WMPageController) -> Int {
+        return titles!.count
+    }
+    override func pageController(_ pageController: WMPageController, titleAt index: Int) -> String {
+        return titles![index]
+    }
+    override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
+        var type: CartoonType = .chahua
+        switch index {
+        case 0: type = .kongbu
+        case 1: type = .gushi
+        case 2: type = .duanzi
+        case 3: type = .lenzhishi
+        case 4: type = .qiqu
+        case 5: type = .dianying
+        case 6: type = .gaoxiao
+        case 7: type = .mengchong
+        case 8: type = .xinqi
+        case 9: type = .huanqiu
+        case 10: type = .sheying
+        case 11: type = .wanyi
+        case 12: type = .chahua
+        default: type = .chahua
+        }
+        print(type)
+        return CartoonViewController(type)
+    }
+}
+

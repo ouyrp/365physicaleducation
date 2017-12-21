@@ -34,7 +34,7 @@ final class HTTPEngine {
             request.responseString(completionHandler: { (res) in
                 //                observable.onNext(res)
                 // 我喜欢在这里做 Logger
-                print(res)
+//                print(res)
             }).responseData(completionHandler: { (res) in
                 observable.onNext(res)
             })

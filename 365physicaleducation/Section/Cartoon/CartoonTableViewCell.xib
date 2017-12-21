@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="183" id="KGk-i7-Jjw" customClass="CartoonTableViewCell" customModule="_65physicaleducation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="183"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="182.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uIt-0B-6A7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="182.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pel-WK-O2q">
+                        <rect key="frame" x="106.5" y="33" width="107" height="59.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jir-ME-rtb">
+                        <rect key="frame" x="213.5" y="33" width="106.5" height="59.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Jir-ME-rtb" secondAttribute="height" multiplier="106:59" id="zo3-kf-Jhz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8I-ZH-Ixz">
+                        <rect key="frame" x="0.0" y="162.5" width="320" height="20"/>
+                        <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="0.35258100076687116" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="mOb-mU-hFB"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="L8I-ZH-Ixz" secondAttribute="trailing" id="4ZB-Y9-Rfj"/>
+                    <constraint firstItem="Jir-ME-rtb" firstAttribute="leading" secondItem="Pel-WK-O2q" secondAttribute="trailing" id="DeA-fu-I0y"/>
+                    <constraint firstItem="uIt-0B-6A7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="F3T-w0-1Nu"/>
+                    <constraint firstAttribute="bottom" secondItem="L8I-ZH-Ixz" secondAttribute="bottom" id="N2w-Lt-rDo"/>
+                    <constraint firstItem="L8I-ZH-Ixz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="RbK-C0-7P1"/>
+                    <constraint firstAttribute="trailing" secondItem="uIt-0B-6A7" secondAttribute="trailing" id="d4t-zL-fUi"/>
+                    <constraint firstItem="uIt-0B-6A7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ejp-h4-QMx"/>
+                    <constraint firstAttribute="bottom" secondItem="uIt-0B-6A7" secondAttribute="bottom" id="sR7-Gp-a62"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="Pel-WK-O2q"/>
+                        <exclude reference="Jir-ME-rtb"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageView1" destination="uIt-0B-6A7" id="O5p-Bn-3nB"/>
+                <outlet property="imageView2" destination="Pel-WK-O2q" id="Z92-2U-Vbz"/>
+                <outlet property="imageView3" destination="Jir-ME-rtb" id="uDS-DB-Cr8"/>
+                <outlet property="titleLabel" destination="L8I-ZH-Ixz" id="8G7-ON-HA0"/>
+            </connections>
+            <point key="canvasLocation" x="-211" y="-220.5"/>
+        </tableViewCell>
+    </objects>
+</document>

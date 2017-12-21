@@ -4,3 +4,7 @@
 
 
 #import "JPUSHService.h"
+
+#import "WMPageController.h"
+
+

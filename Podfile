@@ -5,18 +5,14 @@ use_frameworks!
 
 target '365physicaleducation' do
 
-   pod 'MBMotion'
    pod 'RxSwift'
    pod 'RxCocoa'
    pod 'Alamofire'
    pod 'SwiftyJSON'
    pod 'SnapKit'
    pod 'SVProgressHUD'
-   pod 'SDWebImage'
    pod 'Kingfisher'
-   pod 'Moya'
    pod 'MJRefresh'
-   pod 'Masonry'
    pod 'Reusable'
    pod 'JPush'
 
