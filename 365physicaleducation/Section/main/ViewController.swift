@@ -87,6 +87,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    let disposeBag = DisposeBag()
+    
     fileprivate func loadData(){
         HTTP.request(TestApi(with:pageid))
             .asObservable()
@@ -117,7 +119,7 @@ class ViewController: UIViewController {
                     strongSelf.tableView.mj_footer.endRefreshing()
                 }
                 print($0)
-            }).disposed(by: DisposeBag())
+            }).disposed(by: disposeBag)
     }
     
     

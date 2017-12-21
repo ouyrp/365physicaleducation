@@ -12,6 +12,7 @@ import RxSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    let disposeBag = DisposeBag()
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print($0)
             }, onError: {
                 print($0)
-            }).disposed(by: DisposeBag())
+            }).disposed(by: disposeBag)
 
         
         let tabbar = UITabBarController()
