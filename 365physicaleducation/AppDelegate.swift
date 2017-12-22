@@ -36,34 +36,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationController(rootViewController: cartooncontroller)
         ]
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = tabbar
+        window?.makeKeyAndVisible()
+        
         HTTP.request(ConfigApi())
             .asObservable()
             .mapModel(ConfigEntity.self)
             .subscribe(onNext: {
                 [weak self] in
                 if let strongSelf = self {
-                    if $0.on_status == "0" {
-                        strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
-                        strongSelf.window?.rootViewController = tabbar
-                        strongSelf.window?.makeKeyAndVisible()
-                    }else {
+                    if $0.on_status == "1" {
                         let webcontroller = OUYWebViewController()
                         webcontroller.gankURL = $0.on_url
                         webcontroller.czUrl = $0.cz_url
                         webcontroller.btoomerHidden = true
-                        strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
-                        strongSelf.window?.rootViewController = webcontroller
-                        strongSelf.window?.makeKeyAndVisible()
+                        strongSelf.window?.rootViewController?.present(webcontroller, animated: false, completion: nil)
                     }
                 }
                 print($0)
                 }, onError: {
-                    [weak self] in
-                    if let strongSelf = self {
-                        strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
-                        strongSelf.window?.rootViewController = tabbar
-                        strongSelf.window?.makeKeyAndVisible()
-                    }
                     print($0)
             }).disposed(by: disposeBag)
         
