@@ -20,15 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let homecontroller = ViewController()
         homecontroller.tabBarItem.title = "体育资讯"
-        homecontroller.tabBarItem.image = UIImage.init(named: "homeitem")
+        homecontroller.tabBarItem.image = UIImage(named: "homeitem")
         
         let jokecontroller = JokeViewController()
         jokecontroller.tabBarItem.title = "幽默笑话"
-        jokecontroller.tabBarItem.image = UIImage.init(named: "jokeitem")
+        jokecontroller.tabBarItem.image = UIImage(named: "jokeitem")
         
         let cartooncontroller = CartoonController()
         cartooncontroller.tabBarItem.title = "黑白漫画"
-        cartooncontroller.tabBarItem.image = UIImage.init(named: "coritem")
+        cartooncontroller.tabBarItem.image = UIImage(named: "coritem")
         
         tabbar.viewControllers = [
             UINavigationController(rootViewController: homecontroller),
