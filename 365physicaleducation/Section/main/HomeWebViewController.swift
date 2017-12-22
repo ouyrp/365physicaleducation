@@ -59,7 +59,7 @@ class OUYWebViewController: UIViewController, WKNavigationDelegate{
             button.addTarget(self, action: #selector(OUYWebViewController.buttonAction(sender:)), for: .touchUpInside)
             view.addSubview(button)
             let image = UIImageView.init(frame: CGRect.init(x: 15, y: 0, width: 30, height: 30))
-            image.image = UIImage.init(named: imageArr[i])
+            image.image = UIImage(named: imageArr[i])
             bottomview.addSubview(image)
             let label = UILabel.init(frame: CGRect.init(x: 0, y: 33, width: 60, height: 20))
             label.font = UIFont.systemFont(ofSize: 14)
