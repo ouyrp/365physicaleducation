@@ -92,7 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func noticeWebPush(url: String) {
         let controller = OUYWebViewController()
         controller.gankURL = url
-        window?.rootViewController?.navigationController?.pushViewController(controller, animated: true)
+        window?.rootViewController?.present(controller, animated: true, completion: nil)
     }
     
     private func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
