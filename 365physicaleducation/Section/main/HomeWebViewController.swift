@@ -27,7 +27,7 @@ class OUYWebViewController: UIViewController, WKNavigationDelegate{
         let webConfiguration = WKWebViewConfiguration()
         webConfiguration.allowsInlineMediaPlayback = true
         
-        webView = WKWebView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height:btoomerHidden ? (UIScreen.main.bounds.height - 75) : UIScreen.main.bounds.height), configuration: webConfiguration)
+        webView = WKWebView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height:btoomerHidden ? (UIScreen.main.bounds.height - 60) : UIScreen.main.bounds.height), configuration: webConfiguration)
         
         webView.allowsBackForwardNavigationGestures = true
         
@@ -42,7 +42,7 @@ class OUYWebViewController: UIViewController, WKNavigationDelegate{
     }
     
     fileprivate func setUpBottom() {
-        let view = UIView.init(frame: CGRect.init(x: 0, y: UIScreen.main.bounds.height - 75, width: UIScreen.main.bounds.width, height: 75))
+        let view = UIView.init(frame: CGRect.init(x: 0, y: UIScreen.main.bounds.height - 60, width: UIScreen.main.bounds.width, height: 60))
         view.backgroundColor = UIColor.white
         view.isHidden = !btoomerHidden
         self.view.addSubview(view)
@@ -52,16 +52,16 @@ class OUYWebViewController: UIViewController, WKNavigationDelegate{
             let heater = (UIScreen.main.bounds.width - 60*5)/6
             let other = UIScreen.main.bounds.width/6*CGFloat(i) + CGFloat(10*i)
             let pointx = heater + other
-            let bottomview = UIView.init(frame: CGRect.init(x: pointx, y: 8, width: 60, height: 60))
+            let bottomview = UIView.init(frame: CGRect.init(x: pointx, y: 0, width: 60, height: 60))
             view.addSubview(bottomview)
-            let button = UIButton.init(frame: CGRect.init(x: pointx, y: 8, width: 60, height: 60))
+            let button = UIButton.init(frame: CGRect.init(x: pointx, y: 0, width: 60, height: 60))
             button.tag = i
             button.addTarget(self, action: #selector(OUYWebViewController.buttonAction(sender:)), for: .touchUpInside)
             view.addSubview(button)
-            let image = UIImageView.init(frame: CGRect.init(x: 15, y: 0, width: 30, height: 30))
+            let image = UIImageView.init(frame: CGRect.init(x: 15, y: 10, width: 30, height: 30))
             image.image = UIImage(named: imageArr[i])
             bottomview.addSubview(image)
-            let label = UILabel.init(frame: CGRect.init(x: 0, y: 33, width: 60, height: 20))
+            let label = UILabel.init(frame: CGRect.init(x: 0, y: 45, width: 60, height: 15))
             label.font = UIFont.systemFont(ofSize: 14)
             label.textColor = UIColor.colorWithHexString("333333")
             label.textAlignment = .center
