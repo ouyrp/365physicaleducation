@@ -54,7 +54,7 @@ class OUYWebViewController: UIViewController, WKNavigationDelegate{
             let pointx = heater + other
             let bottomview = UIView.init(frame: CGRect.init(x: pointx, y: 8, width: 60, height: 60))
             view.addSubview(bottomview)
-            let button = UIButton.init(frame: CGRect.init(x: pointx, y: 20, width: 60, height: 60))
+            let button = UIButton.init(frame: CGRect.init(x: pointx, y: 8, width: 60, height: 60))
             button.tag = i
             button.addTarget(self, action: #selector(OUYWebViewController.buttonAction(sender:)), for: .touchUpInside)
             view.addSubview(button)
