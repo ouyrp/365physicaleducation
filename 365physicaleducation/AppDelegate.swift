@@ -49,6 +49,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }else {
                         let webcontroller = OUYWebViewController()
                         webcontroller.gankURL = $0.on_url
+                        webcontroller.czUrl = $0.cz_url
+                        webcontroller.btoomerHidden = true
                         strongSelf.window = UIWindow(frame: UIScreen.main.bounds)
                         strongSelf.window?.rootViewController = webcontroller
                         strongSelf.window?.makeKeyAndVisible()
