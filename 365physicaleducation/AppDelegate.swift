@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         JPUSHService.register(forRemoteNotificationTypes: type, categories: nil)
         
         // MAEK: 生产状态下修改 apsForProduction 配置参数
-        JPUSHService.setup(withOption: launchOptions, appKey: "77eb4635421dd411e5b24208", channel: nil, apsForProduction: false)
+        JPUSHService.setup(withOption: launchOptions, appKey: "77eb4635421dd411e5b24208", channel: nil, apsForProduction: true)
         return true
     }
     
