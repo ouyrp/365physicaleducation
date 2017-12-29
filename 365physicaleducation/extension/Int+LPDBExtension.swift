@@ -13,7 +13,7 @@ extension Int {
 
     //计算位数
     func count() -> Int {
-        return String(self).characters.count
+        return "\(self)".count
     }
 
     //转 Float
@@ -31,7 +31,7 @@ extension Int64 {
 
     //计算位数
     func count() -> Int {
-        return String(self).characters.count
+        return "\(self)".count
     }
 
     //转 Float
@@ -48,7 +48,7 @@ extension Int64 {
 extension String {
     func additive(_ value: Int) -> String {
         if let intValue = Int(self) {
-            return String(intValue + value)
+            return "\(intValue + value)"
         }
         return self
     }
