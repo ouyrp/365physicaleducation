@@ -8,9 +8,14 @@
 
 import UIKit
 import RxSwift
+import UserNotifications
+
+let appKey = "77eb4635421dd411e5b24208"
+let channel = "APP STORE"
+let isProduction = true
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
     
     let disposeBag = DisposeBag()
     var window: UIWindow?
@@ -59,21 +64,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     print($0)
             }).disposed(by: disposeBag)
         
-        let type: UInt = UIUserNotificationType.alert.rawValue | UIUserNotificationType.sound.rawValue | UIUserNotificationType.badge.rawValue
-        JPUSHService.register(forRemoteNotificationTypes: type, categories: nil)
+        if #available(iOS 10, *) {
+            let entity = JPUSHRegisterEntity()
+            entity.types = NSInteger(UNAuthorizationOptions.alert.rawValue) |
+                NSInteger(UNAuthorizationOptions.sound.rawValue) |
+                NSInteger(UNAuthorizationOptions.badge.rawValue)
+            JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self)
+            
+        } else if #available(iOS 8, *) {
+            // 可以自定义 categories
+            JPUSHService.register(
+                forRemoteNotificationTypes: UIUserNotificationType.badge.rawValue |
+                    UIUserNotificationType.sound.rawValue |
+                    UIUserNotificationType.alert.rawValue,
+                categories: nil)
+        } else {
+            // ios 8 以前 categories 必须为nil
+            JPUSHService.register(
+                forRemoteNotificationTypes: UIRemoteNotificationType.badge.rawValue |
+                    UIRemoteNotificationType.sound.rawValue |
+                    UIRemoteNotificationType.alert.rawValue,
+                categories: nil)
+        }
         
-        // MAEK: 生产状态下修改 apsForProduction 配置参数
-        JPUSHService.setup(withOption: launchOptions, appKey: "77eb4635421dd411e5b24208", channel: nil, apsForProduction: true)
+        JPUSHService.setup(withOption: launchOptions, appKey: appKey, channel: channel, apsForProduction: isProduction)
         return true
     }
     
-    private func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        /// Required - 注册 DeviceToken
-        JPUSHService.registerDeviceToken(deviceToken as Data!)
-    }
     
-    private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
-        JPUSHService.handleRemoteNotification(userInfo)
+    
+    @available(iOS 10.0, *)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
+        
+        //    let userInfo = response.notification.request.content.userInfo
+        //    let request = response.notification.request // 收到推送的请求
+        //    let content = request.content // 收到推送的消息内容
+        //
+        //    let badge = content.badge // 推送消息的角标
+        //    let body = content.body   // 推送消息体
+        //    let sound = content.sound // 推送消息的声音
+        //    let subtitle = content.subtitle // 推送消息的副标题
+        //    let title = content.title // 推送消息的标题
+        let userInfo = response.notification.request.content.userInfo;
         if userInfo.keys .contains("url" as NSObject) {
             if let url = userInfo["url" as NSObject] {
                 noticeWebPush(url: url as! String)
@@ -81,22 +113,93 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    private func noticeWebPush(url: String) {
-        let controller = OUYWebViewController()
-        controller.gankURL = url
-        window?.rootViewController?.present(controller, animated: true, completion: nil)
+    @available(iOS 10.0, *)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!,
+                                 withCompletionHandler completionHandler: ((Int) -> Void)!) {
+        //    let userInfo = notification.request.content.userInfo
+        //
+        //    let request = notification.request // 收到推送的请求
+        //    let content = request.content // 收到推送的消息内容
+        //
+        //    let badge = content.badge // 推送消息的角标
+        //    let body = content.body   // 推送消息体
+        //    let sound = content.sound // 推送消息的声音
+        //    let subtitle = content.subtitle // 推送消息的副标题
+        //    let title = content.title // 推送消息的标题
+        let userInfo = notification.request.content.userInfo
+        if userInfo.keys .contains("url" as NSObject) {
+            if let url = userInfo["url" as NSObject] {
+                noticeWebPush(url: url as! String)
+            }
+        }
     }
     
-    private func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        print("did Fail To Register For Remote Notifications With Error = \(error)")
+    func applicationWillResignActive(_ application: UIApplication) {
+        
     }
     
-    private func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject], fetchCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+    func applicationDidEnterBackground(_ application: UIApplication) {
         
-        print("userInfo = \(userInfo)")
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        application.applicationIconBadgeNumber = 0
+        application.cancelAllLocalNotifications()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
         
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("get the deviceToken  \(deviceToken)")
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "DidRegisterRemoteNotification"), object: deviceToken)
+        JPUSHService.registerDeviceToken(deviceToken)
+        
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("did fail to register for remote notification with error ", error)
+        
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         JPUSHService.handleRemoteNotification(userInfo)
-        completionHandler(UIBackgroundFetchResult.newData);
+        print("受到通知", userInfo)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "AddNotificationCount"), object: nil)  //把  要addnotificationcount
+        if userInfo.keys .contains("url" as NSObject) {
+            if let url = userInfo["url" as NSObject] {
+                noticeWebPush(url: url as! String)
+            }
+        }
+    }
+    
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        JPUSHService.showLocalNotification(atFront: notification, identifierKey: nil)
+    }
+    
+    @available(iOS 7, *)
+    func application(_ application: UIApplication, didRegister notificationSettings: UIUserNotificationSettings) {
+        
+    }
+    
+    @available(iOS 7, *)
+    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
+        
+    }
+    
+    @available(iOS 7, *)
+    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, forRemoteNotification userInfo: [AnyHashable: Any], withResponseInfo responseInfo: [AnyHashable: Any], completionHandler: @escaping () -> Void) {
+        if userInfo.keys .contains("url" as NSObject) {
+            if let url = userInfo["url" as NSObject] {
+                noticeWebPush(url: url as! String)
+            }
+        }
     }
     
     // 清除badge 和 通知栏的信息
@@ -105,28 +208,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.cancelAllLocalNotifications()
     }
     
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    private func noticeWebPush(url: String) {
+        let controller = OUYWebViewController()
+        controller.gankURL = url
+        window?.rootViewController?.present(controller, animated: true, completion: nil)
     }
-    
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-    
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-    
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
     
 }
 
