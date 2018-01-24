@@ -35,10 +35,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
         cartooncontroller.tabBarItem.title = "黑白漫画"
         cartooncontroller.tabBarItem.image = UIImage(named: "coritem")
         
+//        let personcontroller = PersonViewController()
+//        personcontroller.tabBarItem.title = "个人中心"
+//        personcontroller.tabBarItem.image = UIImage(named: "")
+        
         tabbar.viewControllers = [
             UINavigationController(rootViewController: homecontroller),
             UINavigationController(rootViewController: jokecontroller),
             UINavigationController(rootViewController: cartooncontroller)
+//            UINavigationController(rootViewController: personcontroller)
         ]
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -140,11 +145,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, JPUSHRegisterDelegate {
     
     func applicationDidEnterBackground(_ application: UIApplication) {
         
-    }
-    
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        application.applicationIconBadgeNumber = 0
-        application.cancelAllLocalNotifications()
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {

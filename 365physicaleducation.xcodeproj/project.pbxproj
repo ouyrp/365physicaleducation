@@ -168,6 +168,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30157D332002106A007B05A2 /* person */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = person;
+			sourceTree = "<group>";
+		};
 		3065D10C1FE8AC1500AF8DC1 /* http */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +313,7 @@
 		3354F9941FEA435D00797808 /* Section */ = {
 			isa = PBXGroup;
 			children = (
+				30157D332002106A007B05A2 /* person */,
 				33DAF7EA1FEB927400FDB392 /* Cartoon */,
 				3065D1291FEB9AD700AF8DC1 /* main */,
 				3354F9951FEA436600797808 /* Joke */,
@@ -905,6 +913,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 365physicaleducation/365physicaleducation.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7249H5FM4V;
 				INFOPLIST_FILE = 365physicaleducation/Info.plist;
@@ -912,6 +921,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ouyang.365physicaleducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/365physicaleducation/JPushDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -924,6 +934,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 365physicaleducation/365physicaleducation.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7249H5FM4V;
 				INFOPLIST_FILE = 365physicaleducation/Info.plist;
@@ -931,6 +942,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ouyang.365physicaleducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/365physicaleducation/JPushDemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
