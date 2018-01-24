@@ -25,10 +25,7 @@ extension ObservableType where E == DataResponse<Data> {
             return Observable.just(try Response.mapArray(T.self, path: path))
         }
     }
-
-    
 }
-
 
 extension DataResponse where Value == Data {
     
